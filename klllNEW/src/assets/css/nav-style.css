@@ -1,0 +1,251 @@
+.top-header {
+    padding: 15px 0;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.logo-container img {
+    max-width: 100px;
+    height: auto;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    background-color: #f5f5f5;
+    outline: none;
+}
+
+.search-container button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #814603;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.nav-icons a {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-icons .btn-masuk {
+    background-color: #814603;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.nav-icons .btn-daftar {
+    background-color: #d3d3d3;
+    color: #814603;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.main-nav {
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav .nav {
+    justify-content: center;
+    gap: 20px;
+}
+
+.main-nav .nav-link {
+    color: #333;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 14px;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+}
+
+.main-nav .nav-link:hover {
+    color: #814603;
+}
+
+@media (max-width: 768px) {
+    .nav-icons {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .search-container {
+        margin: 15px auto;
+    }
+}
+
+/* Dropdown Fix */
+.nav-icons .dropdown-toggle {
+    cursor: pointer;
+    background: transparent !important;
+    border: none;
+    padding: 5px 10px;
+}
+
+.nav-icons .dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.nav-icons .dropdown-item {
+    padding: 8px 16px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-icons .dropdown-item:hover,
+.nav-icons .dropdown-item:focus {
+    background-color: rgba(129, 70, 3, 0.1);
+    color: #663702;
+    padding-left: 20px;
+}
+
+.nav-icons .dropdown-item i {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.nav-icons .dropdown-divider {
+    margin: 5px 0;
+}
+
+/* Tambahkan di bagian <style> atau CSS file Anda */
+.modal {
+    z-index: 99999 !important;
+    /* Pastikan paling atas */
+    pointer-events: auto !important;
+    /* Pastikan bisa interaksi */
+}
+
+.modal-backdrop {
+    z-index: 9999 !important;
+    /* Backdrop di bawah modal */
+}
+
+/* --- GABUNGAN DARI src/admin/assets/css/nav-style.css --- */
+.top-header {
+    padding: 15px 0;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.logo-container img {
+    max-width: 100px;
+    height: auto;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    background-color: #f5f5f5;
+    outline: none;
+}
+
+.search-container button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #814603;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.nav-icons a {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-icons .btn-masuk {
+    background-color: #814603;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.nav-icons .btn-daftar {
+    background-color: #d3d3d3;
+    color: #814603;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.main-nav {
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav .nav {
+    justify-content: center;
+    gap: 20px;
+}
+
+.main-nav .nav-link {
+    color: #333;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 14px;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+}
+
+.main-nav .nav-link:hover {
+    color: #814603;
+}
+
+@media (max-width: 768px) {
+    .nav-icons {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .search-container {
+        margin: 15px auto;
+    }
+}
