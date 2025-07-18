@@ -60,7 +60,7 @@ batik-alomani/
 
 ## 🛠️ Teknologi
 - **Frontend**: HTML5, CSS3, Bootstrap 5, JavaScript (modular, modern)
-- **Backend**: PHP (tanpa framework)
+- **Backend**: PHP 8.3(tanpa framework)
 - **Database**: MySQL/MariaDB
 - **Assets**: Logo, gambar produk, ikon FontAwesome & Bootstrap Icons
 
