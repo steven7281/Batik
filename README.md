@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="klllNewsrc/assets/images/logo.png" alt="Logo Batik Alomani" width="180"/>
+  <img src="klllNEW/src/assets/images/logo.png" alt="Logo Batik Alomani" width="180"/>
 </p>
 
 # 🦚 Batik Alomani - Aplikasi E-Commerce Batik Modern
