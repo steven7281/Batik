@@ -116,6 +116,7 @@ while ($order = mysqli_fetch_assoc($query_orders)) {
                                     <div class="d-flex justify-content-between">
                                         <a href="index.php" class="btn btn-outline-secondary">Kembali</a>
                                         <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                                        
                                     </div>
                                 </div>
                                 <!-- Orders Tab -->
@@ -140,7 +141,7 @@ while ($order = mysqli_fetch_assoc($query_orders)) {
                                                                 <li><strong>Nama:</strong> <?= htmlspecialchars($order['nama']) ?></li>
                                                                 <li><strong>No HP:</strong> <?= htmlspecialchars($order['nohp']) ?></li>
                                                                 <li><strong>Alamat:</strong> <?= htmlspecialchars($order['alamat']) ?>,  <?= htmlspecialchars($order['kelurahan']) ?>,  <?= htmlspecialchars($order['kecamatan']) ?>,  <?= htmlspecialchars($order['kota']) ?>,  <?= htmlspecialchars($order['provinsi']) ?>  <?= htmlspecialchars($order['kode_pos']) ?></li>
-                                                                <li><strong>Resi :</strong> <?= htmlspecialchars($order['resi']) ?></li>
+                                                                <li><strong>Resi :</strong> <?php echo $order['resi']?></li>
                                                                 <li><strong>Status Pengiriman : <span class="badge bg-<?php
                                                                     echo ($order['status_pengiriman'] == 'Dikirim') ? 'success' :
                                                                         (($order['status_pengiriman'] == 'Belum Dikirim') ? 'danger' : 'secondary');
@@ -166,7 +167,7 @@ while ($order = mysqli_fetch_assoc($query_orders)) {
                                                                         <tbody>
                                                                             <?php 
                                                                             foreach ($order['items'] as $item): 
-                                                                                $subtotal = $item['harga'] * $item['jumlah'];
+                                                                                $subtotal = $item['harga'] * $item['jumlah'] + $item['ongkir'];
                                                                             ?>
                                                                             <tr>
                                                                                 <td>

@@ -102,8 +102,15 @@ include "proses/connect.php";
             <div class="col-md-4 mb-4">
                 <h5>Kontak Kami</h5>
                 <ul class="list-unstyled">
-                    <li><i class="fas fa-map-marker-alt me-2"></i> Jl. Mangga Besar IV I No.31 9, RT.9/RW.1, Taman Sari, Kec. Taman Sari, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11150</li>
-                    <li><i class="fas fa-phone me-2"></i> +62 812 8191 382</li>
+                    <li>
+                        <a href="https://www.google.com/maps/place/Jl.+Mangga+Besar+IV+I+No.31+9,+RT.9%2FRW.1,+Taman+Sari,+Kec.+Taman+Sari,+Kota+Jakarta+Barat,+Daerah+Khusus+Ibukota+Jakarta+11150"
+                            target="_blank" style="color: inherit; text-decoration: none;">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            Jl. Mangga Besar IV I No.31 9, RT.9/RW.1, Taman Sari, Kec. Taman Sari, Kota Jakarta Barat,
+                            Daerah Khusus Ibukota Jakarta 11150
+                        </a>
+                    </li>
+                    <li><i class="fas fa-phone me-2"></i>+6285694593634</li>
                     <li><i class="fas fa-envelope me-2"></i> batikAlomani@gmail.com</li>
                 </ul>
             </div>
@@ -111,8 +118,8 @@ include "proses/connect.php";
                 <h5>Ikuti Kami</h5>
                 <div class="social-icons">
                     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/628129020382" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/jakmania_telukgong" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/6285694593634" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -130,19 +137,19 @@ include "proses/connect.php";
         </div>
     </div>
     <!-- Library JS -->
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 
-     <script type="text/javascript">
-        window.$crisp=[];window.CRISP_WEBSITE_ID="30f679d5-2481-41ff-852f-4aa3945d54ec";
-        (function(){
-            d=document;s=d.createElement("script");
-            s.src="https://client.crisp.chat/l.js";
-            s.async=1;d.getElementsByTagName("head")[0].appendChild(s);
+    <script type="text/javascript">
+        window.$crisp = []; window.CRISP_WEBSITE_ID = "30f679d5-2481-41ff-852f-4aa3945d54ec";
+        (function () {
+            d = document; s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1; d.getElementsByTagName("head")[0].appendChild(s);
         })();
     </script>
-    
+
     <!-- YouTube Player Script -->
     <script src="https://www.youtube.com/iframe_api"></script>
     <div id="youtubePlayer" style="display:none;"></div>
@@ -163,7 +170,7 @@ include "proses/connect.php";
                 }
             });
         }
-        
+
         function onPlayerReady(event) {
             <?php if (isset($_SESSION['first_login']) && $_SESSION['first_login']): ?>
                 event.target.playVideo();

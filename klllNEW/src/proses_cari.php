@@ -26,17 +26,6 @@ if (strlen($search_query) >= 3) {
 <head>
     <title>Hasil Pencarian - Batik Alomani</title>
     <style>
-        .search-container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-        }
-
-        .search-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

@@ -58,7 +58,7 @@ if (!$produk) {
                             <button type="button" class="btn btn-outline-dark btn-sm size-btn" data-size="M">M</button>
                             <button type="button" class="btn btn-outline-dark btn-sm size-btn" data-size="L">L</button>
                             <button type="button" class="btn btn-outline-dark btn-sm size-btn"
-data-size="XL">XL</button>
+                                data-size="XL">XL</button>
                         </div>
                     </div>
 
@@ -94,11 +94,12 @@ data-size="XL">XL</button>
                 ?>
                 <div class="col-md-3 col-6 mb-4">
                     <a href="detail.php?id=<?= $rec['id_produk'] ?>" class="text-decoration-none text-dark">
-                        <div class="card border-0">
-                            <div class="position-relative">
+                        <div class="card border-0 h-100">
+                            <div class="position-relative" style="height: 200px; overflow: hidden;">
                                 <span class="badge bg-danger position-absolute" style="top: 10px; left: 10px;">SALE</span>
-                                <img src="assets/images/<?= $rec['foto'] ?>" class="card-img-top"
-                                    alt="<?= $rec['nama_barang'] ?>">
+                                <img src="assets/images/<?= $rec['foto'] ?>"
+                                    class="card-img-top h-100 w-100 object-fit-cover" alt="<?= $rec['nama_barang'] ?>"
+                                    style="object-fit: cover;">
                             </div>
                             <div class="card-body text-center">
                                 <h6 class="card-title"><?= $rec['nama_barang'] ?></h6>
@@ -210,8 +211,8 @@ data-size="XL">XL</button>
         if (input.value < 1) input.value = 1;
     }
 
-   
-        function goToBayar() {
+
+    function goToBayar() {
         const idProduk = <?= $produk['id_produk'] ?>;
         const ukuran = document.getElementById('hiddenUkuran').value;
         const jumlah = document.getElementById('productQuantity').value;

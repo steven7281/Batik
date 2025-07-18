@@ -65,7 +65,7 @@ class ApiRequestor
      */
     public static function remoteCall($url, $server_key, $data_hash, $method)
     {
-        $ch = curl_init();
+        $ch = \curl_init($url);
 
         if (!$server_key) {
             throw new Exception(

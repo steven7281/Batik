@@ -53,7 +53,7 @@ include "proses/connect.php";
                 <?php
                 include 'proses/connect.php';
 
-               
+
                 $produk = mysqli_query($conn, "SELECT * FROM tb_produk WHERE katagori = 4 ORDER BY id_produk DESC LIMIT 4");
 
                 while ($p = mysqli_fetch_assoc($produk)) {
@@ -61,13 +61,15 @@ include "proses/connect.php";
                     <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <a href="detail.php?id=<?php echo $p['id_produk']; ?>" class="text-decoration-none text-dark w-100">
                             <div class="card h-100 text-center">
+                                <span class="badge bg-danger position-absolute" style="top: 10px; left: 10px;">SALE</span>
                                 <img src="assets/images/<?php echo htmlspecialchars($p['foto']); ?>" class="card-img-top"
                                     alt="<?php echo htmlspecialchars($p['nama_barang']); ?>"
-                                    style="object-fit: cover; height: 250px;">
+                                    style="object-fit: cover; height: 550px;">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo htmlspecialchars($p['nama_barang']); ?></h5>
                                     <p class="card-text fw-bold text-black">Rp.
-                                        <?php echo number_format($p['harga'], 0, ',', '.'); ?></p>
+                                        <?php echo number_format($p['harga'], 0, ',', '.'); ?>
+                                    </p>
                                 </div>
                             </div>
                         </a>
@@ -82,60 +84,61 @@ include "proses/connect.php";
     <section class="categories-section py-5">
         <div class="container-fluid">
             <div class="categories-container">
-                <div class="category-item">
-                    <a href="new.php" class="text-decoration-none">
+
+                <a href="new.php" class="text-decoration-none">
+                    <div class="category-item">
                         <img src="assets/images/4.png" alt="TERBARU" class="category-img">
                         <div class="category-text">
                             <p>NEW</p>
                             <h2>Product</h2>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
+                <a href="pria.php" class="text-decoration-none">
                 <div class="category-item">
-                    <a href="pria.php" class="text-decoration-none">
-                        <img src="assets/images/2.png" alt="PRIA" class="category-img">
-                        <div class="category-text">
-                            <p>Shop</p>
-                            <h2>PRIA</h2>
-                        </div>
-                    </a>
+                    <img src="assets/images/8.png" alt="PRIA" class="category-img">
+                    <div class="category-text">
+                        <p>Shop</p>
+                        <h2>PRIA</h2>
+                    </div>
                 </div>
-                <div class="category-item">
-                    <a href="dress.php" class="text-decoration-none">
-                        <img src="assets/images/3.jpg" alt="DRESS" class="category-img">
+                </a>
+                <a href="dress.php" class="text-decoration-none">
+                    <div class="category-item">
+                        <img src="assets/images/2.png" alt="DRESS" class="category-img">
                         <div class="category-text">
                             <p>Shop</p>
                             <h2>DRESS</h2>
                         </div>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="wanita.php" class="text-decoration-none">
+                    </div>
+                </a>
+                <a href="wanita.php" class="text-decoration-none">
+                    <div class="category-item">
                         <img src="assets/images/1.png" alt="Wanita" class="category-img">
                         <div class="category-text">
                             <p>Shop</p>
                             <h2>Wanita</h2>
                         </div>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="anak.php" class="text-decoration-none">
-                        <img src="assets/images/5.png" alt="Anak" class="category-img">
+                    </div>
+                </a>
+                <a href="anak.php" class="text-decoration-none">
+                    <div class="category-item">
+                        <img src="assets/images/anak.jpg" alt="Anak" class="category-img">
                         <div class="category-text">
                             <p>Shop</p>
                             <h2>Anak</h2>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
+                <a href="accessories.php" class="text-decoration-none">
                 <div class="category-item">
-                    <a href="accessories.php" class="text-decoration-none">
-                        <img src="assets/images/6.png" alt="Accessories" class="category-img">
-                        <div class="category-text">
-                            <p>Shop</p>
-                            <h2>Accessories</h2>
-                        </div>
-                    </a>
+                    <img src="assets/images/acc.webp" alt="Accessories" class="category-img">
+                    <div class="category-text">
+                        <p>Shop</p>
+                        <h2>Accessories</h2>
+                    </div>
                 </div>
+                </a>
             </div>
         </div>
     </section>

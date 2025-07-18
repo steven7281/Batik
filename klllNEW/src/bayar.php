@@ -145,7 +145,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $item['quantity'],
                 $item['ukuran'],
                 $ongkir,
-                $grand_total
+                $grand_total,
+
             );
 
             if (!mysqli_stmt_execute($stmt_detail)) {
@@ -154,16 +155,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         // 4. Proses Midtrans
+        $items[] = array(
+            'id' => 'ongkir_' . uniqid(),
+            'price' => $ongkir,
+            'quantity' => 1,
+            'name' => 'Biaya Pengiriman (' . $kota . ')'
+        );
+
         $params = array(
             'transaction_details' => array(
                 'order_id' => $order_id,
-                'gross_amount' => $grand_total,
+                'gross_amount' => $grand_total,  // Subtotal + ongkir
             ),
             'item_details' => $items,
             'customer_details' => array(
                 'first_name' => $nama,
                 'phone' => $telepon,
+                'address' => $alamat,
                 'shipping_address' => array(
+                    'first_name' => $nama,
+                    'phone' => $telepon,
                     'address' => $alamat,
                     'city' => $kota,
                     'postal_code' => $kode_pos,
@@ -551,6 +562,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </main>
 
     <script>
+
         function formatRupiah(angka) {
             return 'Rp' + angka.toLocaleString('id-ID');
         }
